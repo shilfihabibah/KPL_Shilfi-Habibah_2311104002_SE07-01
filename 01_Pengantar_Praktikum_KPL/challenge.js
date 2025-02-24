@@ -16,11 +16,11 @@ input.question("Siapa nama kamu?", (nama) =>{
     input.question("Jurusan kamu?", (jurusan) =>{
         input.question('Universitas kamu? ', (universitas) => {
             input.question('Umur kamu? ', (umur) => {
-                console.log(`\n--- Data Kamu ---`);
-                console.log(`Nama: ${nama}`);
-                console.log(`Jurusan: ${jurusan}`);
-                console.log(`Universitas: ${universitas}`);
-                console.log(`Umur: ${umur} tahun`);
+                console.info(`\n--- Data Pribadi ---`);
+                console.info(`Nama: ${nama}`);
+                console.info(`Jurusan: ${jurusan}`);
+                console.info(`Universitas: ${universitas}`);
+                console.info(`Umur: ${umur} tahun`);
                 input.close();
             });
         });
