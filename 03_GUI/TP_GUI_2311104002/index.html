@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ccc;
+        }
+        .container {
+            background: #888;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 400px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        input, button, p {
+            flex: 1;
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background: #84d1f3;
+            color: rgb(35, 33, 33);
+            font-size: 16px;
+            text-align: center;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <input type="text" id="inputNama" placeholder="Masukkan Nama">
+            <button onclick="tampilkanNama()">Kirim</button>
+        </div>
+        <p id="output">OUTPUT</p>
+    </div>
+
+    <script>
+        function tampilkanNama() {
+            let nama = document.getElementById("inputNama").value;
+            if (nama.trim() !== "") {
+                document.getElementById("output").innerText = "Halo " + nama;
+            } else {
+                document.getElementById("output").innerText = "OUTPUT";
+            }
+        }
+    </script>
+</body>
+</html>
