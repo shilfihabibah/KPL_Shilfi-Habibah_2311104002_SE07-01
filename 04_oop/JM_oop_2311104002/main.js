@@ -13,3 +13,4 @@ karakter.tekanTombol("W"); // Kembali ke Jongkok
 karakter.tekanTombol("W"); // Kembali ke Berdiri
 karakter.tekanTombol("W"); // Terbang (harus ada output "Posisi take off")
 karakter.tekanTombol("S"); // Kembali ke Jongkok (harus ada output "Posisi landing")
+    
