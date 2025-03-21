@@ -1,45 +1,37 @@
+const SayaTubeVideo = require("./SayaTubeVideo");
+
 class SayaTubeUser {
     constructor(username) {
-        this.id = crypto.randomInt(10000, 99999); // Generate random 5-digit ID
+        if (!username || username.length > 100) {
+            throw new Error("Username tidak boleh kosong dan maksimal 100 karakter.");
+        }
+
+        this.id = Math.floor(10000 + Math.random() * 90000); // Generate random 5-digit ID
         this.username = username;
         this.uploadedVideos = [];
     }
 
-    addVideo(video) {
+    AddVideo(video) {
+        if (!(video instanceof SayaTubeVideo)) {
+            throw new Error("Video yang ditambahkan harus berupa instance dari SayaTubeVideo.");
+        }
+        if (video.playCount >= Number.MAX_SAFE_INTEGER) {
+            throw new Error("Play count video melebihi batas maksimum integer.");
+        }
+
         this.uploadedVideos.push(video);
     }
 
-    getTotalVideoPlayCount() {
+    GetTotalVideoPlayCount() {
         return this.uploadedVideos.reduce((total, video) => total + video.playCount, 0);
     }
 
-    printAllVideoPlaycount() {
+    PrintAllVideoPlaycount() {
         console.log(`User: ${this.username}`);
-        this.uploadedVideos.forEach((video, index) => {
-            console.log(`Video ${index + 1} judul: ${video.title}`);
-        });
+        for (let i = 0; i < Math.min(8, this.uploadedVideos.length); i++) {
+            console.log(`Video ${i + 1} judul: ${this.uploadedVideos[i].title}`);
+        }
     }
 }
 
-const user = new SayaTubeUser("Nama Praktikan");
-
-const movies = [
-    "Review Film Interstellar oleh Nama Praktikan",
-    "Review Film Inception oleh Nama Praktikan",
-    "Review Film The Dark Knight oleh Nama Praktikan",
-    "Review Film Parasite oleh Nama Praktikan",
-    "Review Film Avengers: Endgame oleh Nama Praktikan",
-    "Review Film The Matrix oleh Nama Praktikan",
-    "Review Film Whiplash oleh Nama Praktikan",
-    "Review Film Joker oleh Nama Praktikan",
-    "Review Film The Shawshank Redemption oleh Nama Praktikan",
-    "Review Film Fight Club oleh Nama Praktikan"
-];
-
-movies.forEach(movie => {
-    const video = new SayaTubeVideo(movie);
-    video.increasePlayCount(100);
-    user.addVideo(video);
-});
-
-user.printAllVideoPlaycount();
+module.exports = SayaTubeUser;
