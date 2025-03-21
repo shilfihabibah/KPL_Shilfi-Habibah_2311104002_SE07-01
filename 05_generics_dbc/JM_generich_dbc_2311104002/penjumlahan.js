@@ -22,3 +22,4 @@ class Penjumlahan {
 
 const hasil = Penjumlahan.JumlahTigaAngka(23, 11, 10);
 console.log("Hasil penjumlahan:", hasil);
+
