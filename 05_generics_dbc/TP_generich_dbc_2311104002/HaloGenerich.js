@@ -1,7 +1,12 @@
-class HaloGeneric {
-    static SapaUser(user) {
-        console.log(`Halo user ${user}`);
+class DataGeneric {
+    constructor(data) {
+        this.data = data;
+    }
+
+    PrintData() {
+        console.log(`Data yang tersimpan adalah: ${this.data}`);
     }
 }
 
-HaloGeneric.SapaUser("Shilfi");
+const myData = new DataGeneric("2311104002"); // Gantilah dengan NIM praktikan
+myData.PrintData();
