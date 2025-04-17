@@ -1,0 +1,32 @@
+{
+    "members" : [
+      {
+         "firstName": "Hannum",
+         "lastName": "Gusmiarni",
+         "gender": "female",
+         "age": 19,
+         "nim": "2311105048"
+      },
+      {
+         "firstName": "Fitria",
+         "lastName": "Rahmatul",
+         "gender": "Female",
+         "age": 19,
+         "nim": "2311101020"
+      },
+      {
+         "firstName": "Jihan",
+         "lastName": "Kencana",
+         "gender": "Female",
+         "age": 19,
+         "nim": "2311111055"
+      },
+      {
+         "firstName": "Fitri",
+         "lastName": "Regina",
+         "gender": "female",
+         "age": 19,
+         "nim": "2311111017"
+      }
+    ]
+  }
