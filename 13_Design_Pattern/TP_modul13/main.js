@@ -1,4 +1,4 @@
-import { Subject } from '../Subject.js';
+import { Subject } from './Subject.js';
 import { ConcreteObserver } from './Observer.js';
 
 const subject = new Subject();

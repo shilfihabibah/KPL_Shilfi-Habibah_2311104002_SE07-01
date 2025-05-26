@@ -1,8 +1,8 @@
 {
-  "name": "kpl_shilfi-habibah_2311104002_se0701",
+  "name": "kpl_shilfi-habibah_2311104002_se07-01-1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,9 +13,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "bugs": {
-    "url": "https://github.com/shilfihabibah/KPL_Shilfi-Habibah_2311104002_SE07-01issues"
+    "url": "https://github.com/shilfihabibah/KPL_Shilfi-Habibah_2311104002_SE07-01/issues"
   },
-  "homepage": "https://github.com/shilfihabibah/KPL_Shilfi-Habibah_2311104002_SE07-01#readme"
+  "homepage": "https://github.com/shilfihabibah/KPL_Shilfi-Habibah_2311104002_SE07-01#readme",
+  "description": ""
 }
